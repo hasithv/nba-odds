@@ -1,6 +1,5 @@
-using Revise
-includet("nba_game.jl")
-includet("game_sim.jl")
+include("nba_game.jl")
+include("game_sim.jl")
 using .NBA_Game
 using .GameSim
 using Distributions

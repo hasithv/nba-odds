@@ -5,7 +5,7 @@ using .GameSim
 using Distributions
 using Random
 
-using GenieFramework, StippleLatex, DifferentialEquations, ModelingToolkit
+using GenieFramework, StippleLatex
 @genietools
 
 function calc_time(quarter, time)

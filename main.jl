@@ -1,8 +1,7 @@
-using Revise
-includet("nba_game.jl")
-includet("read_game_data.jl")
-includet("game_fit.jl")
-includet("game_sim.jl")
+include("nba_game.jl")
+include("read_game_data.jl")
+include("game_fit.jl")
+include("game_sim.jl")
 using .NBA_Game
 using .GameData
 using .GameFitting

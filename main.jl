@@ -11,9 +11,9 @@ using Distributions
 
 using CSV
 using DataFrames
-using CairoMakie
-using WGLMakie
-using BenchmarkTools
+# using CairoMakie
+# using WGLMakie
+# using BenchmarkTools
 
 #=
 # Load the data
@@ -96,3 +96,5 @@ function main()
     println("A odds: ", 1/p)
     println("B odds: ", 1/q)
 end
+
+main()

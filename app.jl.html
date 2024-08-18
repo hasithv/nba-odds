@@ -1,0 +1,56 @@
+<style>
+    body { background-color: #f4f4f4; }
+    .todo-container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .todo-header { text-align: center; color: #007bff; padding-bottom: 20px; }
+    .todo-input { margin-bottom: 20px; }
+    .todo-list { list-style-type: none; padding: 0; }
+    .todo-item { display: flex; align-items: center; margin-bottom: 10px; padding: 10px; border-radius: 4px; background-color: #f8f9fa; }
+    .todo-item label { margin-left: 10px; flex-grow: 1; }
+    .todo-item button { padding: 2px 8px; }
+    .todo-filters { margin-bottom: 20px; }
+    .todo-filters .btn { margin-right: 5px; }
+    .todo-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+    .btn-focused { background-color: #007bff; color: white; }
+    [v-cloak] { display: none; }
+</style>
+
+<div class="row">
+    <div class="st-col col-12 col-sm st-module">
+        <st-big-number :number="podd" title="Odds A"></st-big-number>
+    </div>
+    <q-btn color="primary" class="st-col" v-on:click="start = !start">Calculate!</q-btn>
+    <div class="st-col col-12 col-sm st-module">
+        <st-big-number :number="qodd" title="Odds B"></st-big-number>
+    </div>
+</div>
+
+<div class="row">
+    <div class="st-col col-12 col-sm st-module">
+        <center>
+            <h1>Score A</h1>
+            <q-input type="number" v-model.number="Ascore"/>
+        </center> 
+    </div>
+
+    <div class="st-col col-12 col-sm st-module">
+        <center>
+            <h1>Score B</h1>
+            <q-input type="number" v-model.number="Bscore"/>
+        </center>
+    </div>
+
+    <div class="st-col col-12 col-sm st-module">
+        <center>
+            <h1>Quarter</h1>
+            <q-input type="number" v-model.number="quarter"/>
+        </center>
+    </div>
+    
+    <div class="st-col col-12 col-sm st-module">
+        <center>
+            <h1>Time</h1>
+            <input v-model="time"></input>
+        </center>
+    </div>
+
+</div>

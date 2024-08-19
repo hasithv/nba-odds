@@ -23,20 +23,6 @@ function empirical_p(game, n)
     return sum(results) / n
 end
 
-function define_ODE2(du,u,p,t)
-    x, y, z = u
-    σ, ρ, β, = p
-
-    du[1] = dx = σ*(y-x)
-    du[2] = dy = x*(ρ-z) - y
-    du[3] = dz = x*y - β*z
-end
-
-u0 = [1.0, 0.0, 0.0]#Timespan of the simulation. 100 in this case. 
-tspan = (0.0, 100.0)#Coefficients of the functions. 
-p = [10.0, 28.0, 8/3]#Feeding the inputs to the solver prob = ODEProblem(parameterized_lorenz!, u0, tspan, p)
-prob = ODEProblem(define_ODE2, u0, tspan, p)
-
 @handlers begin
 # @app GenieApp begin
     @private p = 1.0
